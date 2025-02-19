@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - Vishal Patodekar</title>
+    <link rel="icon" type="image/png" href="WhiteCell Corporation Favicon.png">
+
+    <style>
+        .button1 {
+            width: 8cm;
+            height: 1.2cm;
+            background-color: #e3a004;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow:
+                0 0 15px #ffffff;
+            transition: background-color 0.3s, transform 0.4s;
+        }
+
+        .button1:hover {
+            transform: scale(1.2);
+            background-color: #4e3701;
+            color: white;
+        }
+
+        .button2 {
+            width: 8cm;
+            height: 1.2cm;
+            background-color: #0659ad;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow:
+                0 0 15px #ffffff;
+            transition: background-color 0.3s, transform 0.4s;
+            color: white;
+        }
+
+        .button2:hover {
+            transform: scale(1.2);
+            background-color: #00284f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: #101010; color: white; font-family: Arial, Helvetica, sans-serif;">
+    <center>
+        <h1>Utsav Diamond</h1>
+    </center>
+    <br>
+    <h2>Name - Vishal Patodekar</h2>
+    <h2>Phone No. - +91 8347485153</h2>
+    <h2>Email ID - vishaljoshi.surat@gmail.com</h2>
+    <br>
+    <br>
+    <br>
+    <center>
+        <table>
+            <tr>
+                <td><button class="button1" onclick="Google1()">View Current Month Paylips</button></td>
+                <td style="width: 8cm;"></td>
+                <td><button class="button2" onclick="Google2()">View Last Month Paylips</button></td>
+            </tr>
+        </table>
+    </center>
+
+
+
+
+    <script>
+        if (Notification.permission === "granted") {
+            new Notification("WhiteCell Corporation", {
+                body: "Hi! Vishal Patodekar this is your dashboard",
+                icon: "WhiteCell Corporation Favicon.png"
+            });
+        } else {
+        }
+        function Google1(){
+            var sheetURL = "https://docs.google.com/spreadsheets/d/15LekOtm5UJuJBrhTF-7_ylwVvXakEMsdzI_aX9cR0a4/edit?usp=sharing";
+            window.open(sheetURL, "GoogleSheet", "width=800,height=600");
+        }
+        function Google2(){
+            var sheetURL = "https://docs.google.com/spreadsheets/d/15LekOtm5UJuJBrhTF-7_ylwVvXakEMsdzI_aX9cR0a4/edit?usp=sharing#gid=1531551602";
+            window.open(sheetURL, "GoogleSheet", "width=800,height=600");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+body{
+    background-color: #101010;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+table{
+    color: #ffffff;
+    background-color: #ffffff;
+    font-size: 50px;
+    height: 12cm;
+    margin-top: 80px;
+}
+
+th{
+    background-color: #0659ad;
+    width: 12cm;
+    height: 3cm;
+}
+
+td{
+    color: #0f0f0f;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.loginbutton{
+    width: 8cm;
+    height: 1.2cm;
+    background-color: #e3a004;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #d49500,
+    0 0 30px #ffffff;
+    transition: background-color 0.3s, transform 0.4s;
+}
+
+.loginbutton:hover{
+    transform: scale(1.2);
+    background-color: #9b6d03;
+    color: white;
+}
