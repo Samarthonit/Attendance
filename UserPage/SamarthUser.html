@@ -76,13 +76,21 @@
 
 
     <script>
-        if (Notification.permission === "granted") {
-            new Notification("WhiteCell Corporation", {
-                body: "Hi! Samarth Patodekar this is your dashboard",
-                icon: "WhiteCell Corporation Favicon.png"
+                if (Notification.permission !== "granted") {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    console.log("Notification permission granted!");
+                }
             });
-        } else {
         }
+            if (Notification.permission === "granted") {
+                new Notification("WhiteCell Corporation", {
+                    body: "Hi! Samarth Patodekar this is your attendance dashboard.",
+                    icon: "WhiteCell Corporation Favicon.png"
+                });
+            } else {
+                alert("Please allow notifications to receive alerts!");
+            }
         function Google1() {
             var sheetURL = "https://docs.google.com/spreadsheets/d/1hHcyJU472xDeFg1h58NO2627k-Gs5vrpXqD_BkKVCM8/edit?usp=sharing";
             window.open(sheetURL, "GoogleSheet", "width=800,height=600");
